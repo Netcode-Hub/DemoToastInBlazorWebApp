@@ -1,0 +1,18 @@
+﻿@page "/"
+@using NetcodeHub.Packages.Components.Toast
+@inject ToastService toastService
+@rendermode InteractiveServer
+<button class="btn btn-primary" @onclick="ShowSuccessToast">Show Success Toast</button>
+<button class="btn btn-primary" @onclick="ShowErrorToast">Show Error Toast</button>
+<button class="btn btn-primary" @onclick="ShowInfoToast">Show Info Toast</button>
+<button class="btn btn-primary" @onclick="ShowDangerToast">Show Danger Toast</button>
+@* <Toast  Duration="400" IconClass="bi bi-check" Persist="false" /> *@
+<Toast @ref="toastService.ToastComponent" Duration="6000" IconClass="bi bi-check" Persist="true" />
+
+
+@code{
+    void ShowSuccessToast() => toastService.ShowSuccessToast("Custom title", "Custom Message");
+    void ShowErrorToast() => toastService.ShowErrorToast("Custom title", "Custom Message");
+    void ShowInfoToast() => toastService.ShowInfoToast("Custom title", "Custom Message");
+    void ShowDangerToast() => toastService.ShowDangerToast("Custom title", "Custom Message");
+}
