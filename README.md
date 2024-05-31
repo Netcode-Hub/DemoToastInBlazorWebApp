@@ -24,17 +24,17 @@
              void ShowToast() =>toastService.ShowSuccessToast("Title", "Message");
              void ShowToast() =>toastService.ShowWarningToast("Title", "Message");
 
-}
+     }
 
 
 # How to use version 1.0.4
 # What is New?
 1. Introduction of Toast Position.
-     a. Top
-     b. Bottom
+   a. Top
+   b. Bottom
 # What is changed from version 1.0.0?
 1. No more injection of ToastService making it easy to use.
-   Follw the below guidelines and choose version of choice.
+   Follow the below guidelines and choose version of choice.
    
 # Install the package 
                   NetcodeHub.Packages.Components.Toast
